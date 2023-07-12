@@ -1,0 +1,211 @@
+//====================================================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--whiteColor);
+
+  &-fixed {
+    box-shadow: 0 -8px 15px var(--fourth-colour);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("gap", 100, 20);
+
+    padding: rem(24) rem(15);
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+  }
+
+  .menu {
+    &__body {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__logo {
+      flex: 1 1 auto;
+
+      & img {
+        transition: 0.3s;
+      }
+      & img:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include adaptiveValue("gap", 32, 15);
+
+      transition: 0.3s;
+      
+      @media (max-width: rem(670)) {
+        & {
+          position: absolute;
+          top: 0;
+          right: -100%;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: rem(300);
+          padding: rem(60) 0 rem(40) 0;
+
+          background-color: var(--second-color);
+          border-bottom-left-radius: rem(30);
+        }
+      }
+
+      @media (max-width: rem(400)) {
+        & {
+          width: 100%;
+          border-bottom-right-radius: rem(30);
+          padding-bottom: rem(100);
+        }
+      }
+
+      &.menu-open {
+        right: 0;
+      }
+    }
+
+    &__items {
+      position: relative;
+
+      font-size: rem(14);
+      font-weight: 600;
+      line-height: calc(22 / 14);
+
+      transition: 0.2s linear;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        background-color: var(--second-color);
+        border-radius: 5px;
+
+        transform: scaleX(0);
+        transition: transform 0.2s linear;
+      }
+
+      &:hover {
+        color: var(--second-color);
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+
+      @media (max-width: rem(670)) {
+        & {
+          margin: rem(10) 0;
+
+          font-size: var(--h5-font-size);
+          color: var(--whiteColor);
+        }
+      }
+    }
+
+    &__link {
+    }
+  }
+
+  &__button {
+    @media (max-width: rem(400)) {
+      position: absolute;
+      top: 360%;
+      left: 200%;
+      transform: translateX(-50%);
+
+      color: var(--second-color);
+
+      background-color: var(--whiteColor);
+
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+
+    &.menu-open {
+      left: 50%;
+    }
+
+    &__painted {
+    }
+  }
+}
+
+//Burger
+.icon-menu {
+  display: none;
+  @media (max-width: rem(670)) {
+    position: relative;
+    z-index: 5;
+
+    display: block;
+    width: rem(30);
+    height: rem(18);
+
+    cursor: pointer;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+
+      width: 100%;
+      height: rem(2);
+
+      background-color: var(--first-color);
+      transition: all 0.3s ease 0s;
+    }
+
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+
+    &.menu-open {
+      span {
+        width: 0;
+      }
+
+      span,
+      &::before,
+      &::after {
+        background-color: var(--whiteColor);
+      }
+
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+//====================================================================================================
