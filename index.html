@@ -5,7 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.min.css?_v=20230714230333">
+  <link rel="stylesheet" href="css/style.min.css?_v=20230718171350">
   <link rel="shortcut icon" href="favicon.ico">
   <title>Cabby - Your Taxi Today</title>
 </head>
@@ -21,14 +21,14 @@
           </a>
         </div>
         <ul class="menu__list">
-          <li class="menu__items"><a class="menu__link" href="#">Why Cabby</a></li>
-          <li class="menu__items"><a class="menu__link" href="#">How it Works</a></li>
-          <li class="menu__items"><a class="menu__link" href="#">Testimonials</a></li>
+          <li class="menu__items"><a class="menu__link" href="#advantages">Why Cabby</a></li>
+          <li class="menu__items"><a class="menu__link" href="#working">How it Works</a></li>
+          <li class="menu__items"><a class="menu__link" href="#testimonials">Testimonials</a></li>
         </ul>
       </nav>
-    </div>
-    <div class="header__button button__painted">
-      <a href="#">Become a Driver</a>
+      <div class="menu__button button__painted">
+        <a href="#banner">Become a Driver</a>
+      </div>
     </div>
     <button class="icon-menu" type="button"><span></span></button>
   </div>
@@ -41,11 +41,11 @@
                 <h1 class="block-heading__title">Become Cabby Driver Today</h1>
                 <p class="block-heading__text">An easy-to-use platform for drivers to connect with riders and start earning money today</p>
               </div>
-              <div class="main-heading__download-apps">
-                <a class="main-heading__app" href="https://play.google.com/" target="_blank">
+              <div class="main-heading__download-apps download-apps">
+                <a class="download-apps__app" href="https://play.google.com/" target="_blank">
                   <picture><source srcset="img/home/main-heading/google-play.webp" type="image/webp"><img src="img/home/main-heading/google-play.png" alt="Google play"></picture>
                 </a>
-                <a class="main-heading__app" href="https://www.apple.com/app-store/" target="_blank">
+                <a class="download-apps__app" href="https://www.apple.com/app-store/" target="_blank">
                   <picture><source srcset="img/home/main-heading/app-store.webp" type="image/webp"><img src="img/home/main-heading/app-store.png" alt="App Store"></picture>
                 </a>
               </div>
@@ -55,11 +55,11 @@
             </div>
           </div>
         </section>
-        <section class="page__advantages advantages">
+        <section class="page__advantages advantages" id="advantages">
           <div class="advantages__container">
             <div class="block-heading">
               <h2 class="block-heading__title">Why Cabby?</h2>
-              <p class="block-heading-text">Explore the benefits of becoming a Cabby driver</p>
+              <p class="block-heading__text">Explore the benefits of becoming a Cabby driver</p>
             </div>
             <div class="advantages__content">
               <div class="advantages__item">
@@ -109,7 +109,7 @@
               </div>
             </div>
           </div>
-        </section>\
+        </section>
         <section class="page__road road">
           <div class="block-heading">
             <h2 class="block-heading__title">Cabby is Easy to Start</h2>
@@ -136,7 +136,7 @@
             </div>
           </div>
         </section>
-        <section class="page__working working">
+        <section class="page__working working" id="working">
           <div class="working__container">
             <div class="working__sides">
               <button class="working__left-swipe" type="button">
@@ -175,14 +175,14 @@
             </div>
           </div>
         </section>
-        <section class="page__testimonials testimonials">
+        <section class="page__testimonials testimonials" id="testimonials">
           <div class="testimonials__container">
             <div class="block-heading">
               <h2 class="block-heading__title">Testimonials</h2>
             </div>
             <div class="testimonials__content">
               <div class="testimonials__users">
-                <div class="user active">
+                <div class="user" onclick="currentComment(1)">
                   <picture><source srcset="img/home/testimonials/leo.webp" type="image/webp"><img class="user__logo" src="img/home/testimonials/leo.png" alt="Logo"></picture>
                   <div class="user__info">
                     <h6 class="user__name">Leo Carder</h6>
@@ -192,8 +192,7 @@
                     <img src="img/home/testimonials/link.svg" alt="Link">
                   </div>
                 </div>
-
-                <div class="user">
+                <div class="user" onclick="currentComment(2)">
                   <picture><source srcset="img/home/testimonials/kaiya.webp" type="image/webp"><img class="user__logo" src="img/home/testimonials/kaiya.png" alt="Logo"></picture>
                   <div class="user__info">
                     <h6 class="user__name">Kaiya Levin</h6>
@@ -203,8 +202,7 @@
                     <img src="img/home/testimonials/link.svg" alt="Link">
                   </div>
                 </div>
-
-                <div class="user">
+                <div class="user" onclick="currentComment(3)">
                   <picture><source srcset="img/home/testimonials/ann.webp" type="image/webp"><img class="user__logo" src="img/home/testimonials/ann.png" alt="Logo"></picture>
                   <div class="user__info">
                     <h6 class="user__name">Ann Rosser</h6>
@@ -224,16 +222,138 @@
                   <p class="comment__text">Working as a Cabby driver, I improved ability to listen and interact better with people.</p>
                   <p class="comment__text">Cabby excels in customer service as they have an efficient system for drivers to contact them instantly.</p>
                 </div>
+
+                <div class="comment">
+                  <h6 class="comment__title">The best company in the world</h6>
+                  <img class="comment__stars" src="img/home/testimonials/stars.svg" alt="Stars">
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque eum hic modi nostrum nulla quasi quidem quo repellat vel!
+                  </p>
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque beatae commodi corporis cum dicta earum eum ex facilis, illum incidunt ipsam iusto placeat quam quasi, recusandae ullam unde voluptatum.</p>
+                </div>
+
+                <div class="comment">
+                  <h6 class="comment__title">I am fancy to work with this company</h6>
+                  <img class="comment__stars" src="img/home/testimonials/stars.svg" alt="Stars">
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, optio.
+                  </p>
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate doloremque eveniet iste numquam, quis voluptate?</p>
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto culpa quia voluptate.</p>
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim facilis labore repellat sit. Unde.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__faq faq">
+          <div class="faq__container">
+            <div class="block-heading">
+              <h2 class="block-heading__title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq__accordion accordion">
+              <div class="accordion__item">
+                <button class="accordion__title">How long does the application process take?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate excepturi illum saepe? Architecto asperiores dicta est inventore labore placeat, repellendus. Amet aspernatur culpa dolores eos eum eveniet non vel voluptatum?</p>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__title">When and where should I drive?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, pariatur.</p>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__title">What documents are required?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur expedita, natus obcaecati sunt vel velit?</p>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__title">How are hourly earnings calculated?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cum distinctio enim eum excepturi facilis ipsa magni minima, nesciunt nihil obcaecati quidem quisquam reprehenderit sit tempore totam ullam veritatis. Laborum maxime numquam odio saepe veniam?</p>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__title">Is the Cabby platform safe?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__title">Do I need my own car?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab deserunt doloribus, ex impedit itaque molestias officia recusandae similique tenetur vel.</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer" id="banner">
   <div class="footer__container">
+    <div class="footer__banner banner">
+      <picture><source srcset="img/footer/banner.webp" type="image/webp"><img class="banner__image" src="img/footer/banner.png" alt="Banner"></picture>
+      <div class="banner__content">
+        <div class="block-heading">
+          <h2 class="block-heading__title">Still have questions?</h2>
+        </div>
+        <div class="banner__support">
+          <div class="banner__button button__painted">
+            <a href="#">Write to us</a>
+          </div>
+          <p class="banner__subtitle">We provide support 24/7</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__menu menu">
+      <nav class="menu__body">
+        <div class="menu__logo" id="logo">
+          <a href="#logo">
+            <img src="img/header/logo.svg" alt="Logo">
+          </a>
+        </div>
+        <ul class="menu__list">
+          <li class="menu__items"><a class="menu__link" href="#">Why Cabby</a></li>
+          <li class="menu__items"><a class="menu__link" href="#">How it Works</a></li>
+          <li class="menu__items"><a class="menu__link" href="#">Testimonials</a></li>
+        </ul>
+      </nav>
+      <div class="footer__download-apps download-apps">
+        <a class="download-apps__app" href="https://play.google.com/" target="_blank">
+          <picture><source srcset="img/footer/google-play.webp" type="image/webp"><img src="img/footer/google-play.png" alt="Google play"></picture>
+        </a>
+        <a class="download-apps__app" href="https://www.apple.com/app-store/" target="_blank">
+          <picture><source srcset="img/footer/app-store.webp" type="image/webp"><img src="img/footer/app-store.png" alt="App Store"></picture>
+        </a>
+      </div>
+    </div>
+    <hr class="footer__line">
+    <div class="footer__links">
+      <div class="footer__socials">
+        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F" target="_blank">
+          <img src="img/footer/icons/twitter.svg" alt="Twitter"></a>
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="img/footer/icons/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.youtube.com/" target="_blank">
+          <img src="img/footer/icons/youtube.svg" alt="Youtube"></a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="img/footer/icons/instagram.svg" alt="Instagram"></a>
+      </div>
+      <div class="footer__pages">
+        <a href="#">Privacy</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
   </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20230714230333"></script>
+    <script src="js/app.min.js?_v=20230718171350"></script>
   </body>
 </html>
