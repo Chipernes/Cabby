@@ -151,3 +151,7 @@ For example header__container, main__container etc.
 
 // Connecting individual page styles
 @import "home.scss";
+
+.page {
+  padding-top: rem(110);
+}

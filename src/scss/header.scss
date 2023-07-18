@@ -13,12 +13,14 @@
   }
 
   &__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include adaptiveValue("gap", 100, 20);
-
-    padding: rem(24) rem(15);
+    @media (max-width: rem(700)) {
+     & {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: rem(30);
+     }
+    }
   }
 
   &__menu {
@@ -27,30 +29,13 @@
 
   .menu {
     &__body {
-      display: flex;
-      justify-content: center;
     }
 
     &__logo {
-      flex: 1 1 auto;
-
-      & img {
-        transition: 0.3s;
-      }
-      & img:hover {
-        transform: scale(1.05);
-      }
     }
 
     &__list {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @include adaptiveValue("gap", 32, 15);
-
-      transition: 0.3s;
-      
-      @media (max-width: rem(670)) {
+      @media (max-width: rem(700)) {
         & {
           position: absolute;
           top: 0;
@@ -81,39 +66,7 @@
     }
 
     &__items {
-      position: relative;
-
-      font-size: rem(14);
-      font-weight: 600;
-      line-height: calc(22 / 14);
-
-      transition: 0.2s linear;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-
-        display: block;
-        width: 100%;
-        height: 2px;
-
-        background-color: var(--second-color);
-        border-radius: 5px;
-
-        transform: scaleX(0);
-        transition: transform 0.2s linear;
-      }
-
-      &:hover {
-        color: var(--second-color);
-        &::after {
-          transform: scaleX(1);
-        }
-      }
-
-      @media (max-width: rem(670)) {
+      @media (max-width: rem(700)) {
         & {
           margin: rem(10) 0;
 
@@ -125,28 +78,13 @@
 
     &__link {
     }
-  }
 
-  &__button {
-    @media (max-width: rem(400)) {
-      position: absolute;
-      top: 360%;
-      left: 200%;
-      transform: translateX(-50%);
+    &__button {
+      &.menu-open {
+      }
 
-      color: var(--second-color);
-
-      background-color: var(--whiteColor);
-
-      white-space: nowrap;
-      transition: 0.3s;
-    }
-
-    &.menu-open {
-      left: 50%;
-    }
-
-    &__painted {
+      &__painted {
+      }
     }
   }
 }
@@ -154,7 +92,7 @@
 //Burger
 .icon-menu {
   display: none;
-  @media (max-width: rem(670)) {
+  @media (max-width: rem(700)) {
     position: relative;
     z-index: 5;
 

@@ -14,11 +14,11 @@
                 <h1 class="block-heading__title">Become Cabby Driver Today</h1>
                 <p class="block-heading__text">An easy-to-use platform for drivers to connect with riders and start earning money today</p>
               </div>
-              <div class="main-heading__download-apps">
-                <a class="main-heading__app" href="https://play.google.com/" target="_blank">
+              <div class="main-heading__download-apps download-apps">
+                <a class="download-apps__app" href="https://play.google.com/" target="_blank">
                   <img src="img/home/main-heading/google-play.png" alt="Google play">
                 </a>
-                <a class="main-heading__app" href="https://www.apple.com/app-store/" target="_blank">
+                <a class="download-apps__app" href="https://www.apple.com/app-store/" target="_blank">
                   <img src="img/home/main-heading/app-store.png" alt="App Store">
                 </a>
               </div>
@@ -28,11 +28,11 @@
             </div>
           </div>
         </section>
-        <section class="page__advantages advantages">
+        <section class="page__advantages advantages" id="advantages">
           <div class="advantages__container">
             <div class="block-heading">
               <h2 class="block-heading__title">Why Cabby?</h2>
-              <p class="block-heading-text">Explore the benefits of becoming a Cabby driver</p>
+              <p class="block-heading__text">Explore the benefits of becoming a Cabby driver</p>
             </div>
             <div class="advantages__content">
               <div class="advantages__item">
@@ -82,7 +82,7 @@
               </div>
             </div>
           </div>
-        </section>\
+        </section>
         <section class="page__road road">
           <div class="block-heading">
             <h2 class="block-heading__title">Cabby is Easy to Start</h2>
@@ -109,7 +109,7 @@
             </div>
           </div>
         </section>
-        <section class="page__working working">
+        <section class="page__working working" id="working">
           <div class="working__container">
             <div class="working__sides">
               <button class="working__left-swipe" type="button">
@@ -148,14 +148,14 @@
             </div>
           </div>
         </section>
-        <section class="page__testimonials testimonials">
+        <section class="page__testimonials testimonials" id="testimonials">
           <div class="testimonials__container">
             <div class="block-heading">
               <h2 class="block-heading__title">Testimonials</h2>
             </div>
             <div class="testimonials__content">
               <div class="testimonials__users">
-                <div class="user active">
+                <div class="user" onclick="currentComment(1)">
                   <img class="user__logo" src="img/home/testimonials/leo.png" alt="Logo">
                   <div class="user__info">
                     <h6 class="user__name">Leo Carder</h6>
@@ -165,8 +165,7 @@
                     <img src="img/home/testimonials/link.svg" alt="Link">
                   </div>
                 </div>
-
-                <div class="user">
+                <div class="user" onclick="currentComment(2)">
                   <img class="user__logo" src="img/home/testimonials/kaiya.png" alt="Logo">
                   <div class="user__info">
                     <h6 class="user__name">Kaiya Levin</h6>
@@ -176,8 +175,7 @@
                     <img src="img/home/testimonials/link.svg" alt="Link">
                   </div>
                 </div>
-
-                <div class="user">
+                <div class="user" onclick="currentComment(3)">
                   <img class="user__logo" src="img/home/testimonials/ann.png" alt="Logo">
                   <div class="user__info">
                     <h6 class="user__name">Ann Rosser</h6>
@@ -196,6 +194,74 @@
                   </p>
                   <p class="comment__text">Working as a Cabby driver, I improved ability to listen and interact better with people.</p>
                   <p class="comment__text">Cabby excels in customer service as they have an efficient system for drivers to contact them instantly.</p>
+                </div>
+
+                <div class="comment">
+                  <h6 class="comment__title">The best company in the world</h6>
+                  <img class="comment__stars" src="img/home/testimonials/stars.svg" alt="Stars">
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eaque eum hic modi nostrum nulla quasi quidem quo repellat vel!
+                  </p>
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque beatae commodi corporis cum dicta earum eum ex facilis, illum incidunt ipsam iusto placeat quam quasi, recusandae ullam unde voluptatum.</p>
+                </div>
+
+                <div class="comment">
+                  <h6 class="comment__title">I am fancy to work with this company</h6>
+                  <img class="comment__stars" src="img/home/testimonials/stars.svg" alt="Stars">
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, optio.
+                  </p>
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate doloremque eveniet iste numquam, quis voluptate?</p>
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto culpa quia voluptate.</p>
+                  <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim facilis labore repellat sit. Unde.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__faq faq">
+          <div class="faq__container">
+            <div class="block-heading">
+              <h2 class="block-heading__title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq__accordion accordion">
+              <div class="accordion__item">
+                <button class="accordion__title">How long does the application process take?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate excepturi illum saepe? Architecto asperiores dicta est inventore labore placeat, repellendus. Amet aspernatur culpa dolores eos eum eveniet non vel voluptatum?</p>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__title">When and where should I drive?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, pariatur.</p>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__title">What documents are required?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur expedita, natus obcaecati sunt vel velit?</p>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__title">How are hourly earnings calculated?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cum distinctio enim eum excepturi facilis ipsa magni minima, nesciunt nihil obcaecati quidem quisquam reprehenderit sit tempore totam ullam veritatis. Laborum maxime numquam odio saepe veniam?</p>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__title">Is the Cabby platform safe?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__title">Do I need my own car?</button>
+                <div class="accordion__panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab deserunt doloribus, ex impedit itaque molestias officia recusandae similique tenetur vel.</p>
                 </div>
               </div>
             </div>
