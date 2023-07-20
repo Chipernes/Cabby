@@ -814,7 +814,7 @@ For example header__container, main__container etc.
 }
 
 .no-webp .road__container{
-  background: url("../img/home/road/background.png"), center; }
+  background: url("../img/home/road/background.png") center; }
 
 .road__container {
   display: -webkit-box;
@@ -1806,4 +1806,4 @@ For example header__container, main__container etc.
   }
 }
 
-.webp .road__container{ background: url(../img/home/road/background.webp), center; }
+.webp .road__container{ background: url(../img/home/road/background.webp) center; }
