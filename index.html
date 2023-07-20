@@ -5,7 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.min.css?_v=20230718171350">
+  <link rel="stylesheet" href="css/style.min.css?_v=20230720225452">
   <link rel="shortcut icon" href="favicon.ico">
   <title>Cabby - Your Taxi Today</title>
 </head>
@@ -139,19 +139,25 @@
         <section class="page__working working" id="working">
           <div class="working__container">
             <div class="working__sides">
-              <button class="working__left-swipe" type="button">
+              <button class="working__swipe-left" type="button">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.4">
-                    <path d="M16.1644 12.8465C16.8159 12.1956 16.8159 11.1403 16.1644 10.4895C15.5129 9.83859 14.4567 9.83859 13.8052 10.4895L5.48861 18.7969C4.83713 19.4478 4.83713 20.503 5.48861 21.1539L13.831 29.5105C14.4825 30.1614 15.5388 30.1614 16.1902 29.5105C16.8417 28.8597 16.8417 27.8044 16.1902 27.1535L10.6957 21.6421L33.4245 21.6421C34.2946 21.6421 35 20.8959 35 19.9754C35 19.0549 34.2946 18.3087 33.4245 18.3087L10.6957 18.3087L16.1644 12.8465Z" fill="white"/>
-                  </g>
+                  <path id="swipeLeftArrow" d="M16.1644 12.8465C16.8159 12.1956 16.8159 11.1403 16.1644 10.4895C15.5129 9.83859 14.4567 9.83859 13.8052 10.4895L5.48861 18.7969C4.83713 19.4478 4.83713 20.503 5.48861 21.1539L13.831 29.5105C14.4825 30.1614 15.5388 30.1614 16.1902 29.5105C16.8417 28.8597 16.8417 27.8044 16.1902 27.1535L10.6957 21.6421L33.4245 21.6421C34.2946 21.6421 35 20.8959 35 19.9754C35 19.0549 34.2946 18.3087 33.4245 18.3087L10.6957 18.3087L16.1644 12.8465Z" fill="white"/>
                 </svg>
               </button>
               <div class="working__on-phone">
-                <picture><source srcset="img/home/working/phone-1.webp" type="image/webp"><img src="img/home/working/phone-1.png" alt="First phone screenshot"></picture>
+                <div class="working__slider">
+                  <picture><source srcset="img/home/working/phone-1.webp" type="image/webp"><img class="working__phone" src="img/home/working/phone-1.png" alt="First phone screenshot"></picture>
+
+                  <picture><source srcset="img/home/working/phone-2.webp" type="image/webp"><img class="working__phone" src="img/home/working/phone-2.png" alt="First phone screenshot"></picture>
+
+                  <picture><source srcset="img/home/working/phone-3.webp" type="image/webp"><img class="working__phone" src="img/home/working/phone-3.png" alt="First phone screenshot"></picture>
+
+                  <picture><source srcset="img/home/working/phone-4.webp" type="image/webp"><img class="working__phone" src="img/home/working/phone-4.png" alt="First phone screenshot"></picture>
+                </div>
               </div>
-              <button class="working__right-swipe" type="button">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23.8356 27.1535C23.1841 27.8044 23.1841 28.8597 23.8356 29.5105C24.4871 30.1614 25.5433 30.1614 26.1948 29.5105L34.5114 21.2031C35.1629 20.5522 35.1629 19.497 34.5114 18.8461L26.169 10.4895C25.5175 9.83859 24.4612 9.83859 23.8098 10.4895C23.1583 11.1403 23.1583 12.1956 23.8098 12.8465L29.3043 18.3579L6.57554 18.3579C5.70539 18.3579 5 19.1041 5 20.0246C5 20.9451 5.70539 21.6913 6.57554 21.6913L29.3043 21.6913L23.8356 27.1535Z" fill="white"/>
+              <button class="working__swipe-right active" type="button">
+                <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path id="swipeRightArrow" d="M23.8356 27.1535C23.1841 27.8044 23.1841 28.8597 23.8356 29.5105C24.4871 30.1614 25.5433 30.1614 26.1948 29.5105L34.5114 21.2031C35.1629 20.5522 35.1629 19.497 34.5114 18.8461L26.169 10.4895C25.5175 9.83859 24.4612 9.83859 23.8098 10.4895C23.1583 11.1403 23.1583 12.1956 23.8098 12.8465L29.3043 18.3579L6.57554 18.3579C5.70539 18.3579 5 19.1041 5 20.0246C5 20.9451 5.70539 21.6913 6.57554 21.6913L29.3043 21.6913L23.8356 27.1535Z" fill="white"/>
                 </svg>
               </button>
             </div>
@@ -164,13 +170,51 @@
               </div>
               <div class="block-heading">
                 <h2 class="block-heading__title">How It Works</h2>
-                <p class="block-heading__text">
-                  Download the Cabby App. <br>
-                  Open the App and turn on driver mode.
-                </p>
               </div>
-              <div class="block-heading__number">
-                <img src="img/home/working/01.svg" alt="01">
+              <div class="working__description">
+                <div class="working__item">
+                  <p>
+                    Download the Cabby App. <br>
+                    Open the App and turn on driver mode.
+                  </p>
+                </div>
+                <div class="working__item">
+                  <h6>Submit your documents:</h6>
+                  <ul>
+                    <li>valid driver's license</li>
+                    <li>ID card</li>
+                    <li>proof of residency in your city or province</li>
+                    <li>insurance if you plan to drive your own car</li>
+                  </ul>
+                </div>
+                <div class="working__item">
+                  <ul>
+                    <li>Submit your photo.</li>
+                    <li>Provide information for a background check.</li>
+                  </ul>
+                </div>
+                <div class="working__item">
+                  <p>
+                    Find out if your car is eligible or get a car
+                  </p>
+                  <a class="working__link" href="#banner">Get Started <img src="img/home/working/arrow.svg" alt="Arrow"></a>
+                </div>
+              </div>
+              <div class="working__counter">
+                <div class="working__number">
+                  <div class="working__number-container">
+                    <img src="img/home/working/01.svg" alt="01">
+                  </div>
+                  <div class="working__number-container">
+                    <img src="img/home/working/02.svg" alt="02">
+                  </div>
+                  <div class="working__number-container">
+                    <img src="img/home/working/03.svg" alt="03">
+                  </div>
+                  <div class="working__number-container">
+                    <img src="img/home/working/04.svg" alt="04">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -313,7 +357,7 @@
     </div>
     <div class="footer__menu menu">
       <nav class="menu__body">
-        <div class="menu__logo" id="logo">
+        <div class="menu__logo">
           <a href="#logo">
             <img src="img/header/logo.svg" alt="Logo">
           </a>
@@ -354,6 +398,6 @@
   </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20230718171350"></script>
+    <script src="js/app.min.js?_v=20230720225452"></script>
   </body>
 </html>
