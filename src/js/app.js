@@ -8,4 +8,5 @@ flsFunctions.isWebp();
 
 
 // Include files with your code
-import "./files/script.js"
+import "./files/script.js";
+import "./files/animations.js";

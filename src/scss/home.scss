@@ -104,6 +104,7 @@
     justify-content: center;
     width: 100%;
     max-width: rem(650);
+
     & img {
       width: 100%;
     }
@@ -166,14 +167,20 @@
 
     &:nth-child(1) {
       background-color: var(--fourth-colour);
+
+      transition: all 0.4s ease 0s;
     }
 
     &:nth-child(2) {
       background-color: var(--second-color);
+
+      transition: all 0.4s ease 0.2s;
     }
 
     &:nth-child(3) {
       background-color: var(--third-color);
+
+      transition: all 0.4s ease 0.4s;
 
       & .block-heading {
         color: var(--first-color);

@@ -171,8 +171,6 @@ let moveNumberDown = () => {
 }
 
 
-
-
 // Accordion
 const acc = document.getElementsByClassName("accordion__title");
 
